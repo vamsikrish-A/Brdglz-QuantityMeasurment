@@ -27,6 +27,13 @@ public class QualityMeasurementTest {
         Feet feet1 = new Feet(0.0);
         Assertions.assertNotEquals(feet1, 0);
     }
+    @Test
+    public void givenTypeValues_ShouldReturnEqual(){
+        Feet feet1 = new Feet(1.0);
+        Feet feet2 = new Feet(0.0);
+        Assertions.assertFalse(feet1.equals(feet2));
+        Assertions.assertFalse(feet1.equals(null));
+    }
 
 
 }
