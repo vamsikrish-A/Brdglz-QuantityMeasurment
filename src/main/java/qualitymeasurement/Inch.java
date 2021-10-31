@@ -1,6 +1,7 @@
 package qualitymeasurement;
 
 public class Inch {
+    private static final double ONE_INCH_TO_YARDS = 0.027777777777777778;
     private final double value;
 
     public Inch(Double value) {
@@ -16,4 +17,8 @@ public class Inch {
     }
 
 
+    public double getInYards(double v) {
+        double inchToYardsConversion = v * ONE_INCH_TO_YARDS ;
+        return inchToYardsConversion;
+    }
 }
