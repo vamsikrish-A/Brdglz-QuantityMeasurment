@@ -68,6 +68,12 @@ public class QualityMeasurementTest {
         double inYards = feet.getInYards(3.0);
         Assertions.assertEquals(1, inYards);
     }
+    @Test
+    public  void givenFeetValue_ReturnInYards_ShouldNotBeEqual(){
+        Feet feet = new Feet(1.0);
+        double inYards = feet.getInYards(1.0);
+        Assertions.assertNotEquals(1,inYards);
+    }
 
 
 }
