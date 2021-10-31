@@ -1,11 +1,9 @@
 package qualitymeasurement;
 
-import java.util.Objects;
-
 public class Inch {
     private final double value;
 
-    public Inch(double value) {
+    public Inch(Double value) {
         this.value = value;
     }
 

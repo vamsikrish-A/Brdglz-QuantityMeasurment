@@ -48,6 +48,12 @@ public class QualityMeasurementTest {
         Inch inch2 = new Inch(1.0);
         Assertions.assertNotEquals(inch1,inch2);
     }
+    @Test
+    public void given0InchAndNull_ShouldReturnException() {
+        Inch inch1 = new Inch(0.0);
+        Assertions.assertNotNull(inch1);
+
+    }
 
 
 }
