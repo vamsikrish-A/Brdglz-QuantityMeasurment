@@ -52,6 +52,7 @@ public class QualityMeasurementTest {
     public void given0InchAndNull_ShouldReturnException() {
         Inch inch1 = new Inch(0.0);
         Assertions.assertNotNull(inch1);
+        Assertions.assertFalse(inch1.equals(null));
 
     }
 
