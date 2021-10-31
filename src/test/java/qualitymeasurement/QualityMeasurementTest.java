@@ -88,6 +88,12 @@ public class QualityMeasurementTest {
         double inInch = yard.getInInch(1.0);
         Assertions.assertEquals(36,inInch);
     }
+    @Test
+    public void givenInchValue_ReturnInYards_ShouldBeEqual() {
+        Inch inch = new Inch(1.0);
+        double inYards = inch.getInYards(36);
+        Assertions.assertEquals(1,inYards);
+    }
 
 
 }
