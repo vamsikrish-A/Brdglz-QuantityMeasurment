@@ -101,5 +101,12 @@ public class QualityMeasurementTest {
         Assertions.assertEquals(3.0, inFeet);
     }
 
+    @Test
+    public void givenInInch_ReturnInCentimeters_ShouldBeEqual() {
+        Inch inch = new Inch(1.0);
+        double inInch = inch.getInCentiMeters(2.0);
+        Assertions.assertEquals(5.0, inInch);
+    }
+
 
 }
