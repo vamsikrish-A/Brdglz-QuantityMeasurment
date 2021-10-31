@@ -1,11 +1,9 @@
 package qualitymeasurement;
 
-import java.util.Objects;
-
 public class Feet {
     private final double value;
 
-    public Feet(double value) {
+    public Feet(Double value) {
         this.value = value;
     }
 

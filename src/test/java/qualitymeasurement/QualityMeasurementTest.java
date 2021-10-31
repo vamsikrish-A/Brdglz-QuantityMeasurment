@@ -17,5 +17,11 @@ public class QualityMeasurementTest {
         Assertions.assertNotEquals(feet1,feet2);
     }
 
+    @Test
+    public void givenNullValue_ShouldReturnFalse() {
+        Feet feet1 = new Feet(0.0);
+        Assertions.assertNotNull(feet1);
+    }
+
 
 }
