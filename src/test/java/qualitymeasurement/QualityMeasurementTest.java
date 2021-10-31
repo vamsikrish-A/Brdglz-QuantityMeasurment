@@ -62,5 +62,12 @@ public class QualityMeasurementTest {
         Assertions.assertEquals(12, inInch);
     }
 
+    @Test
+    public void givenFeetValue_ReturnInYards_ShouldBeEqual() {
+        Feet feet = new Feet(3.0);
+        double inYards = feet.getInYards(3.0);
+        Assertions.assertEquals(1, inYards);
+    }
+
 
 }
