@@ -86,13 +86,19 @@ public class QualityMeasurementTest {
     public void givenYardValue_ReturnInInch_ShouldBeEqual() {
         Yard yard = new Yard(1.0);
         double inInch = yard.getInInch(1.0);
-        Assertions.assertEquals(36,inInch);
+        Assertions.assertEquals(36, inInch);
     }
     @Test
     public void givenInchValue_ReturnInYards_ShouldBeEqual() {
         Inch inch = new Inch(1.0);
         double inYards = inch.getInYards(36);
-        Assertions.assertEquals(1,inYards);
+        Assertions.assertEquals(1, inYards);
+    }
+    @Test
+    public void givenInYards_RetrunInFeet_ShouldBeEqual() {
+        Yard yard = new Yard(1.0);
+        double inFeet = yard.getInFeet(1.0);
+        Assertions.assertEquals(3.0, inFeet);
     }
 
 
