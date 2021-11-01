@@ -89,6 +89,12 @@ public class QualityMeasurementTest {
         Length inch = new Length(1.0, Length.Unit.INCH);
         Assertions.assertFalse(feet.compare(inch));
     }
+    @Test
+    public void  given1FeetAnd12Inch_ShouldReturnEqual() {
+        Length feet = new Length(1.0, Length.Unit.FEET);
+        Length inch = new Length(12.0, Length.Unit.INCH);
+        Assertions.assertEquals(12,12);
+    }
 
 
 
