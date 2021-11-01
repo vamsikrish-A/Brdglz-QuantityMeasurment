@@ -7,21 +7,15 @@ import java.util.Objects;
 *
 * @author: VamsiKrishna*/
 public class UnitMeasurementSystem {
+    private static final double FEET_TO_INCH = 12;
     private double value;
+    private MeasurementUnits unit;
 
 
-
-    private static final double FEET_TO_INCH = 12.0;
-
-    enum Unit {
-        FEET, INCH, YARDS, CENTIMETERS;
-    }
-
-    private final Unit unit;
+   
 
 
-
-    public UnitMeasurementSystem(Double value, Unit unit) {
+    public UnitMeasurementSystem(Double value, MeasurementUnits unit) {
         this.value = value;
         this.unit = unit;
     }
@@ -35,9 +29,9 @@ public class UnitMeasurementSystem {
     }
     
     public boolean compare(UnitMeasurementSystem that){
-        if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.FEET))
+        if (this.unit.equals(Length.FEET) && that.unit.equals(Length.FEET))
             return Double.compare(this.value, that.value) == 0;
-        if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.INCH))
+        if (this.unit.equals(Length.FEET) && that.unit.equals(Length.INCH))
             return Double.compare(that.value*FEET_TO_INCH, that.value) == 0;
         return false;
     }
