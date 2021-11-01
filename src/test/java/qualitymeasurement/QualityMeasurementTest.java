@@ -55,6 +55,28 @@ public class QualityMeasurementTest {
         Assertions.assertFalse(inch1.equals(null));
 
     }
+    @Test
+    public void given0YardsAnd0Yards_ShouldReturnEqual () {
+        Length yard1 = new Length(0.0, Length.Unit.YARDS);
+        Length yard2 = new Length(0.0, Length.Unit.YARDS);
+        Assertions.assertEquals(yard1, yard2);
+    } @Test
+    public void given0YardsAnd0Yards_ShouldReturnNotEqual () {
+        Length yard1 = new Length(0.0, Length.Unit.YARDS);
+        Length yard2 = new Length(1.0, Length.Unit.YARDS);
+        Assertions.assertNotEquals(yard1, yard2);
+    }
+    @Test
+    public void given0CentiMetersAnd0Centimeters_ShouldReturnEqual () {
+        Length centiMeter1 = new Length(0.0, Length.Unit.CENTIMETERS);
+        Length centiMeter2 = new Length(0.0, Length.Unit.CENTIMETERS);
+        Assertions.assertEquals(centiMeter1, centiMeter2);
+    }@Test
+    public void given0CentiMetersAnd0Centimeters_ShouldReturnNotEqual () {
+        Length centiMeter1 = new Length(0.0, Length.Unit.CENTIMETERS);
+        Length centiMeter2 = new Length(1.0, Length.Unit.CENTIMETERS);
+        Assertions.assertNotEquals(centiMeter1, centiMeter2);
+    }
 
 
 }

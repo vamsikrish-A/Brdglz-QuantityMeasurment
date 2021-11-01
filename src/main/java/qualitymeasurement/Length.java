@@ -7,7 +7,11 @@ import java.util.Objects;
 *
 * @author: VamsiKrishna*/
 public class Length {
-    enum Unit { FEET, INCH }
+    enum Unit { FEET(12.0), INCH(1), YARDS(36.0), CENTIMETERS(0.4);
+
+        Unit(double v) {
+        }
+    }
 
     private final Unit unit;
 
