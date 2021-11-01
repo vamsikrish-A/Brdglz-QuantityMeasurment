@@ -78,5 +78,13 @@ public class QualityMeasurementTest {
         Assertions.assertNotEquals(centiMeter1, centiMeter2);
     }
 
+    @Test
+    public void given0FeetAnd0Inch_ShouldReturnEqualLenght() {
+        Length feet = new Length(0.0, Length.Unit.FEET);
+        Length inch = new Length(0.0, Length.Unit.INCH);
+        Assertions.assertTrue(feet.compare(inch));
+    }
+
+
 
 }

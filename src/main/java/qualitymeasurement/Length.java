@@ -7,10 +7,12 @@ import java.util.Objects;
 *
 * @author: VamsiKrishna*/
 public class Length {
-    enum Unit { FEET(12.0), INCH(1), YARDS(36.0), CENTIMETERS(0.4);
 
-        Unit(double v) {
-        }
+
+    private static final double FEET_TO_INCH = 12.0;
+
+    enum Unit {
+        FEET, INCH, YARDS, CENTIMETERS;
     }
 
     private final Unit unit;
@@ -29,6 +31,16 @@ public class Length {
         Length length = (Length) o;
         return Double.compare(length.value, value) == 0 && unit == length.unit;
     }
+    
+    public boolean compare(Length that){
+        if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.FEET))
+            return Double.compare(this.value, that.value) == 0;
+        if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.INCH))
+            return Double.compare(that.value*FEET_TO_INCH, that.value) == 0;
+        return false;
+    }
+
+    
 
 
 
