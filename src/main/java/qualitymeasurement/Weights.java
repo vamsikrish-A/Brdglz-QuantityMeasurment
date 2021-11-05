@@ -9,6 +9,6 @@ public enum Weights implements MeasurementUnits{
 
     @Override
     public double convertToBaseUnit(double value) {
-        return 0;
+        return value * conversionValue;
     }
 }
