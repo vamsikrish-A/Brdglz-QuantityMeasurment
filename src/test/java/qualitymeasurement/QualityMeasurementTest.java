@@ -163,6 +163,14 @@ public class QualityMeasurementTest {
         Assertions.assertEquals(7.56, additionCheck);
     }
 
+    @Test
+    public void given1litreAnd1000ML_Gives2Litres_shouldReturnEquals() {
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volumes.LITRES);
+        UnitMeasurementSystem millilitres = new UnitMeasurementSystem(1000.0, Volumes.MILLILITERS);
+        double additionCheck = litre.add(millilitres);
+        Assertions.assertEquals(2.0, additionCheck);
+    }
+
 
 
 }
