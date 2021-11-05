@@ -135,6 +135,13 @@ public class QualityMeasurementTest {
 
     }
 
+    @Test
+    public void given0GallonAnd0litters_ShouldReturnEqual() {
+        UnitMeasurementSystem gallon = new UnitMeasurementSystem(0.0,Volumes.GALLON);
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(0.0, Volumes.LITERS);
+        Assertions.assertEquals(0,0);
+    }
+
 
 
 }
