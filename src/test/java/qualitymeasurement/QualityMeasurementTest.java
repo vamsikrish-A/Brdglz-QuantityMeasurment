@@ -177,6 +177,12 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem grams = new UnitMeasurementSystem(0.0, Weights.GRAMS);
         Assertions.assertEquals(0.0, 0.0);
     }
+    @Test
+    public void given1KgAnd1000Grams_ShouldReturnEqual() {
+        UnitMeasurementSystem kg = new UnitMeasurementSystem(1.0, Weights.KG);
+        UnitMeasurementSystem grams = new UnitMeasurementSystem(1000.0, Weights.GRAMS);
+        Assertions.assertTrue(kg.compare(grams));
+    }
 
 
 
