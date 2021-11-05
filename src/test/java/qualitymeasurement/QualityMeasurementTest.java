@@ -147,7 +147,13 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem gallon = new UnitMeasurementSystem(1.0, Volumes.GALLON);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(3.78, Volumes.LITRES);
         Assertions.assertTrue(gallon.compare(litre));
-    } //push to git.
+    }
+    @Test
+    public void given1LitreAnd1000ML_ShouldReturnEqual() {
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volumes.LITRES);
+        UnitMeasurementSystem millilitres = new UnitMeasurementSystem(1000.0, Volumes.MILLILITERS);
+        Assertions.assertTrue(litre.compare(millilitres));
+    }
 
 
 
