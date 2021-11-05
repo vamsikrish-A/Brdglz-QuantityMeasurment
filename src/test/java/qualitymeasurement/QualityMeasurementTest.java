@@ -189,6 +189,13 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem kg = new UnitMeasurementSystem(1000.0, Weights.KG);
         Assertions.assertTrue(tonne.compare(kg));
     }
+    @Test
+    public void given1TonneAnd1000gramsGives1001Kg_shouldReturnEqual() {
+        UnitMeasurementSystem tonne = new UnitMeasurementSystem(1.0, Weights.TONNE);
+        UnitMeasurementSystem grams = new UnitMeasurementSystem(1000.0, Weights.GRAMS);
+        double additionCheck = grams.add(tonne);
+        Assertions.assertEquals(1001.0, additionCheck);
+    }
 
 
 
