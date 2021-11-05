@@ -197,6 +197,13 @@ public class QualityMeasurementTest {
         Assertions.assertEquals(1001.0, additionCheck);
     }
 
+    @Test
+    public void  given0FahrenheitAnd0Fahreheit_ShouldReturnEqual() {
+        UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        Assertions.assertTrue(fahrenheit1.compare(fahrenheit2));
+    }
+
 
 
 }
