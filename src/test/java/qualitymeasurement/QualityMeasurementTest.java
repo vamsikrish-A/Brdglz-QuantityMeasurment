@@ -117,12 +117,21 @@ public class QualityMeasurementTest {
         double additionCheck = inch.add(feet);
         Assertions.assertEquals(14,additionCheck);
 
-    }@Test
+    }
+    @Test
     public void given1FeetAnd1Feet_ShouldReturnInInchesBeEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(1.0,Length.FEET);
         UnitMeasurementSystem feet2 = new UnitMeasurementSystem(1.0, Length.FEET);
         double additionCheck = feet2.add(feet1);
         Assertions.assertEquals(24,additionCheck);
+
+    }
+    @Test
+    public void given2InchAnd2_5CentiMeters_ShouldReturnInInchesBeEqual() {
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0,Length.INCH);
+        UnitMeasurementSystem centimeters = new UnitMeasurementSystem(2.5, Length.CENTIMETERS);
+        double additionCheck = inch.add(centimeters);
+        Assertions.assertEquals(3,additionCheck);
 
     }
 
