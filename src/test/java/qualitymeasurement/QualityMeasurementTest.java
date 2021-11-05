@@ -103,6 +103,13 @@ public class QualityMeasurementTest {
 
     }
 
+    @Test
+    public void  given1FeetAnd12Inch_ShouldReturnTrue() {
+        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(2.0,Length.INCH);
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
+        double additionCheck = inch.add(inch1);
+        Assertions.assertEquals(4,additionCheck);
+    }
 
 
 
