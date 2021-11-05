@@ -155,6 +155,14 @@ public class QualityMeasurementTest {
         Assertions.assertTrue(litre.compare(millilitres));
     }
 
+    @Test
+    public void given1gallonAnd3_78Litre_gives7_57Litre_shouldReturnEqual() {
+        UnitMeasurementSystem gallon = new UnitMeasurementSystem(1.0, Volumes.GALLON);
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(3.78, Volumes.LITRES);
+        double additionCheck = litre.add(gallon);
+        Assertions.assertEquals(7.56, additionCheck);
+    }
+
 
 
 }
