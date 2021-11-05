@@ -30,12 +30,12 @@ public class UnitMeasurementSystem {
      * @params : Passing the unit measure lengths objects
      * if both the conditions fails,this compare returns false.
      *    */
-    public boolean compare(UnitMeasurementSystem that) {
-        if (this.unit.equals(Length.FEET) && that.unit.equals(Length.FEET))
-            return Double.compare(this.value, that.value) == 0;
-        if (this.unit.equals(Length.FEET) && that.unit.equals(Length.INCH))
-            return Double.compare(that.value * FEET_TO_INCH, that.value) == 0;
-        return false;
+    public boolean compare(UnitMeasurementSystem thatUnit) {
+        if (this.unit.getClass() != thatUnit.unit.getClass())
+            return false;
+        if (this.unit.equals(thatUnit.unit))
+            return this.equals(thatUnit);
+        return Double.compare(this.unit.convertToBaseUnit(this.value),thatUnit.unit.convertToBaseUnit(thatUnit.value)) == 0;
     }
 
     /*

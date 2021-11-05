@@ -1,7 +1,7 @@
 package qualitymeasurement;
 
 public enum Volumes implements MeasurementUnits {
-    GALLON(3.78),LITERS(1.0), MILLILITERS(0.001);
+    GALLON(3.78),LITRES(1.0), MILLILITERS(0.001);
     private final double conversionValue;
     Volumes (double conversionValue) {
         this.conversionValue = conversionValue;
@@ -10,6 +10,6 @@ public enum Volumes implements MeasurementUnits {
 
     @Override
     public double convertToBaseUnit(double value) {
-        return 0;
+        return value*conversionValue;
     }
 }
