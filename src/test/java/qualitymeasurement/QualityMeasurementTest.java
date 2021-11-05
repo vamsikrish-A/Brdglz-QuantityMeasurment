@@ -171,6 +171,13 @@ public class QualityMeasurementTest {
         Assertions.assertEquals(2.0, additionCheck);
     }
 
+    @Test
+    public void given0GramsAnd0KGs_ShouldReturnEqual() {
+        UnitMeasurementSystem kg = new UnitMeasurementSystem(0.0, Weights.KG);
+        UnitMeasurementSystem grams = new UnitMeasurementSystem(0.0, Weights.GRAMS);
+        Assertions.assertEquals(0.0, 0.0);
+    }
+
 
 
 }
