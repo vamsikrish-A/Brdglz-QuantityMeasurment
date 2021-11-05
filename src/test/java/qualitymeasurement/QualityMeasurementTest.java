@@ -104,11 +104,19 @@ public class QualityMeasurementTest {
     }
 
     @Test
-    public void  given1FeetAnd12Inch_ShouldReturnTrue() {
+    public void  given2InchAnd2Inch_ShouldReturnInInchesBeEqual() {
         UnitMeasurementSystem inch1 = new UnitMeasurementSystem(2.0,Length.INCH);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
         double additionCheck = inch.add(inch1);
         Assertions.assertEquals(4,additionCheck);
+    }
+    @Test
+    public void given1FeetAnd2Inch_ShouldReturnInInchesBeEqual() {
+        UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0,Length.FEET);
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
+        double additionCheck = inch.add(feet);
+        Assertions.assertEquals(14,additionCheck);
+
     }
 
 
