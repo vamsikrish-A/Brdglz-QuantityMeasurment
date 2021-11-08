@@ -35,13 +35,13 @@ public class UnitMeasurementSystem {
             return false;
         if (this.unit.equals(thatUnit.unit))
             return this.equals(thatUnit);
-        return Double.compare(this.unit.convertToBaseUnit(this.value),thatUnit.unit.convertToBaseUnit(thatUnit.value)) == 0;
+        return Double.compare(this.unit.convertToBaseUnit(this.value), thatUnit.unit.convertToBaseUnit(thatUnit.value)) == 0;
     }
 
     /*
-    * Addition of two different unit lengths.
-    * @params:Passing the unit measure lengths objects
-    * */
+     * Addition of two different unit lengths.
+     * @params:Passing the unit measure lengths objects
+     * */
     public double add(UnitMeasurementSystem thatUnit) {
         return this.unit.convertToBaseUnit(this.value) + thatUnit.unit.convertToBaseUnit(thatUnit.value);
     }

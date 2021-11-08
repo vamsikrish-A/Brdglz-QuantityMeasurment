@@ -5,11 +5,12 @@ import org.junit.jupiter.api.Test;
 
 public class QualityMeasurementTest {
     @Test
-    public void given0FeetAnd0Feet_ShouldReturnEqual () {
+    public void given0FeetAnd0Feet_ShouldReturnEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
         UnitMeasurementSystem feet2 = new UnitMeasurementSystem(0.0, Length.FEET);
         Assertions.assertEquals(feet1, feet2);
     }
+
     @Test
     public void given0FeetAnd1Feet_ShouldReturnNotEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
@@ -22,13 +23,15 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
         Assertions.assertNotNull(feet1);
     }
+
     @Test
     public void givenThisValueAndValue_ShouldReturnNotEquals() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
         Assertions.assertNotEquals(feet1, 0);
     }
+
     @Test
-    public void givenTypeValues_ShouldReturnEqual(){
+    public void givenTypeValues_ShouldReturnEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem feet2 = new UnitMeasurementSystem(0.0, Length.FEET);
         Assertions.assertFalse(feet1.equals(feet2));
@@ -39,15 +42,17 @@ public class QualityMeasurementTest {
     public void given0InchAnd0Inch_ShouldReturnEquals() {
         UnitMeasurementSystem inch1 = new UnitMeasurementSystem(0.0, Length.INCH);
         UnitMeasurementSystem inch2 = new UnitMeasurementSystem(0.0, Length.INCH);
-        Assertions.assertEquals(inch1,inch2);
+        Assertions.assertEquals(inch1, inch2);
 
     }
+
     @Test
     public void given0InchAnd1Inch_ShouldReturnNotEquals() {
         UnitMeasurementSystem inch1 = new UnitMeasurementSystem(0.0, Length.INCH);
         UnitMeasurementSystem inch2 = new UnitMeasurementSystem(1.0, Length.INCH);
         Assertions.assertNotEquals(inch1, inch2);
     }
+
     @Test
     public void given0InchAndNull_ShouldReturnException() {
         UnitMeasurementSystem inch1 = new UnitMeasurementSystem(0.0, Length.INCH);
@@ -55,24 +60,30 @@ public class QualityMeasurementTest {
         Assertions.assertFalse(inch1.equals(null));
 
     }
+
     @Test
-    public void given0YardsAnd0Yards_ShouldReturnEqual () {
+    public void given0YardsAnd0Yards_ShouldReturnEqual() {
         UnitMeasurementSystem yard1 = new UnitMeasurementSystem(0.0, Length.YARDS);
         UnitMeasurementSystem yard2 = new UnitMeasurementSystem(0.0, Length.YARDS);
         Assertions.assertEquals(yard1, yard2);
-    } @Test
-    public void given0YardsAnd0Yards_ShouldReturnNotEqual () {
+    }
+
+    @Test
+    public void given0YardsAnd0Yards_ShouldReturnNotEqual() {
         UnitMeasurementSystem yard1 = new UnitMeasurementSystem(0.0, Length.YARDS);
         UnitMeasurementSystem yard2 = new UnitMeasurementSystem(1.0, Length.YARDS);
         Assertions.assertNotEquals(yard1, yard2);
     }
+
     @Test
-    public void given0CentiMetersAnd0Centimeters_ShouldReturnEqual () {
+    public void given0CentiMetersAnd0Centimeters_ShouldReturnEqual() {
         UnitMeasurementSystem centiMeter1 = new UnitMeasurementSystem(0.0, Length.CENTIMETERS);
         UnitMeasurementSystem centiMeter2 = new UnitMeasurementSystem(0.0, Length.CENTIMETERS);
         Assertions.assertEquals(centiMeter1, centiMeter2);
-    }@Test
-    public void given0CentiMetersAnd0Centimeters_ShouldReturnNotEqual () {
+    }
+
+    @Test
+    public void given0CentiMetersAnd0Centimeters_ShouldReturnNotEqual() {
         UnitMeasurementSystem centiMeter1 = new UnitMeasurementSystem(0.0, Length.CENTIMETERS);
         UnitMeasurementSystem centiMeter2 = new UnitMeasurementSystem(1.0, Length.CENTIMETERS);
         Assertions.assertNotEquals(centiMeter1, centiMeter2);
@@ -83,63 +94,70 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem feet = new UnitMeasurementSystem(0.0, Length.FEET);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(0.0, Length.INCH);
         Assertions.assertTrue(feet.compare(inch));
-    }@Test
+    }
+
+    @Test
     public void given1FeetAnd1Inch_ShouldReturnNotEqual() {
         UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(1.0, Length.INCH);
         Assertions.assertFalse(feet.compare(inch));
     }
+
     @Test
-    public void  given1FeetAnd12Inch_ShouldReturnEqual() {
+    public void given1FeetAnd12Inch_ShouldReturnEqual() {
         UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(12.0, Length.INCH);
-        Assertions.assertEquals(12,12);
+        Assertions.assertEquals(12, 12);
     }
+
     @Test
     public void given12InchAnd1Feet_ShouldReturnEqual() {
         UnitMeasurementSystem inch = new UnitMeasurementSystem(12.0, Length.INCH);
         UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0, Length.FEET);
-        Assertions.assertEquals(1,1);
+        Assertions.assertEquals(1, 1);
 
     }
 
     @Test
-    public void  given2InchAnd2Inch_ShouldReturnInInchesBeEqual() {
-        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(2.0,Length.INCH);
+    public void given2InchAnd2Inch_ShouldReturnInInchesBeEqual() {
+        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(2.0, Length.INCH);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
         double additionCheck = inch.add(inch1);
-        Assertions.assertEquals(4,additionCheck);
+        Assertions.assertEquals(4, additionCheck);
     }
+
     @Test
     public void given1FeetAnd2Inch_ShouldReturnInInchesBeEqual() {
-        UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0,Length.FEET);
+        UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
         double additionCheck = inch.add(feet);
-        Assertions.assertEquals(14,additionCheck);
+        Assertions.assertEquals(14, additionCheck);
 
     }
+
     @Test
     public void given1FeetAnd1Feet_ShouldReturnInInchesBeEqual() {
-        UnitMeasurementSystem feet1 = new UnitMeasurementSystem(1.0,Length.FEET);
+        UnitMeasurementSystem feet1 = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem feet2 = new UnitMeasurementSystem(1.0, Length.FEET);
         double additionCheck = feet2.add(feet1);
-        Assertions.assertEquals(24,additionCheck);
+        Assertions.assertEquals(24, additionCheck);
 
     }
+
     @Test
     public void given2InchAnd2_5CentiMeters_ShouldReturnInInchesBeEqual() {
-        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0,Length.INCH);
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
         UnitMeasurementSystem centimeters = new UnitMeasurementSystem(2.5, Length.CENTIMETERS);
         double additionCheck = inch.add(centimeters);
-        Assertions.assertEquals(3,additionCheck);
+        Assertions.assertEquals(3, additionCheck);
 
     }
 
     @Test
     public void given0GallonAnd0litters_ShouldReturnEqual() {
-        UnitMeasurementSystem gallon = new UnitMeasurementSystem(0.0,Volumes.GALLON);
+        UnitMeasurementSystem gallon = new UnitMeasurementSystem(0.0, Volumes.GALLON);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(0.0, Volumes.LITRES);
-        Assertions.assertEquals(0,0);
+        Assertions.assertEquals(0, 0);
     }
 
     @Test
@@ -148,6 +166,7 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(3.78, Volumes.LITRES);
         Assertions.assertTrue(gallon.compare(litre));
     }
+
     @Test
     public void given1LitreAnd1000ML_ShouldReturnEqual() {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volumes.LITRES);
@@ -177,33 +196,35 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem grams = new UnitMeasurementSystem(0.0, Weights.GRAMS);
         Assertions.assertEquals(0.0, 0.0);
     }
+
     @Test
     public void given1KgAnd1000Grams_ShouldReturnEqual() {
         UnitMeasurementSystem kg = new UnitMeasurementSystem(1.0, Weights.KG);
         UnitMeasurementSystem grams = new UnitMeasurementSystem(1000.0, Weights.GRAMS);
         Assertions.assertTrue(kg.compare(grams));
     }
+
     @Test
     public void given1TonneAnd1000Kgs_ShouldReturnEqual() {
         UnitMeasurementSystem tonne = new UnitMeasurementSystem(1.0, Weights.TONNE);
         UnitMeasurementSystem kg = new UnitMeasurementSystem(1000.0, Weights.KG);
         Assertions.assertTrue(tonne.compare(kg));
     }
+
     @Test
     public void given1TonneAnd1000gramsGives1001Kg_shouldReturnEqual() {
         UnitMeasurementSystem tonne = new UnitMeasurementSystem(1.0, Weights.TONNE);
         UnitMeasurementSystem grams = new UnitMeasurementSystem(1000.0, Weights.GRAMS);
         double additionCheck = grams.add(tonne);
-        Assertions.assertEquals(1001.0, additionCheck);
+        Assertions.assertEquals(1001000.0, additionCheck);
     }
 
     @Test
-    public void  given0FahrenheitAnd0Fahreheit_ShouldReturnEqual() {
+    public void given0FahrenheitAnd0Fahrenheit_ShouldReturnEqual() {
         UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
         UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
         Assertions.assertTrue(fahrenheit1.compare(fahrenheit2));
     }
-
 
 
 }
