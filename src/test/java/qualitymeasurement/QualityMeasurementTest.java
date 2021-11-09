@@ -225,6 +225,18 @@ public class QualityMeasurementTest {
         UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
         Assertions.assertTrue(fahrenheit1.compare(fahrenheit2));
     }
+    @Test
+    public void given0CelsiusAnd0Celsius_ShouldReturnEqual() {
+        UnitMeasurementSystem celsius1 = new UnitMeasurementSystem(0.0, Temperature.CELSIUS);
+        UnitMeasurementSystem celsius2 = new UnitMeasurementSystem(0.0, Temperature.CELSIUS);
+        Assertions.assertTrue(celsius1.compare(celsius2));
+    }
+    @Test
+    public void given212FahrenheitAnd100Celsius_ShouldReturnEqual() {
+        UnitMeasurementSystem celsius1 = new UnitMeasurementSystem(212.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem celsius2 = new UnitMeasurementSystem(100.0, Temperature.CELSIUS);
+        Assertions.assertTrue(celsius1.compare(celsius2));
+    }
 
 
 }
