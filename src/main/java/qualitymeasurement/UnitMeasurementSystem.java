@@ -5,7 +5,9 @@ import java.util.Objects;
 /*
  * @purpose: Quantity Measurement
  *
- * @author: VamsiKrishna*/
+ * @author: VamsiKrishna
+ * @since: 02-Nov-2021
+ * */
 public class UnitMeasurementSystem {
     private static final double FEET_TO_INCH = 12;
     private double value;
